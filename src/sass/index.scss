@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$azul-escuro: #0A0d24;
+$azul-marinho: #161D49;
+$azul-claro: #313CC0;
+$marrom: #4A4149;
+$laranja: #C65439;
+$azul-mais-claro: #3B9DC2;
+$cinza-claro: #BEBDC2;
+$branco: #fff;
+
+html,body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background: $azul-mais-claro;
+    margin: 0;
+    padding: 0;
+}
+button{
+	background-color:#40404d;
+    border-radius:42px;
+    border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:18px;
+	padding:12px 41px;
+	text-decoration:none;
+}
+button:hover {
+	background-color:#3e5b94;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+header{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $azul-escuro;
+
+    @media (max-width:640px){
+        flex-direction: column;
+    }
+}
+.content-information{
+    input{
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    button{
+        padding: 10px;
+        font-size: 0.9em;
+        margin: 10px;
+    }
+    .botoes{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width:640px){
+            justify-content: center;
+        }
+    }
+    @media (max-width:640px){
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+header img{
+    width: 300px;
+    height: 100px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: $azul-mais-claro;
+}
+.card{
+    width: auto;
+    height: auto;
+    padding: 15px;
+    font-size: 1em;
+    margin: 30px;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5%;
+    background: rgb(60, 62, 68);
+    color: $branco;
+    box-shadow: 1px 8px 11px 0px rgba(0,0,0,0.71);
+}
+.card h1{
+    font-size: 1em;
+    text-decoration: underline;
+    a{
+        color: $branco;
+    }
+}
+.card img{
+    width: 50%;
+    height: 100%;
+    border-radius: 15%;
+    box-shadow: 1px 8px 11px 0px rgba(0,0,0,0.71);
+}
+.card .informacoes{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2em;
+}
+footer{
+    color: $branco;
+    font-size: 2em;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $azul-escuro;
+
+    margin-top: 25px;
+}
+.status{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.dead{
+    background-color: red;
+}
+.alive{
+    background-color: green;
+}
+.divStatus{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background-color: $azul-escuro;
+
+    button{
+        margin: 15px;
+        padding: 20px;
+    }
+}
