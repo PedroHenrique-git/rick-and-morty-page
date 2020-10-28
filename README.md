@@ -1,9 +1,9 @@
 <h1>Fan Page Rick And Morty<h1>
     
 
-<p>Este projeto foi feito usando javaScript,scss,html,css,webpack e gulp</p>
-<p>Caso queira clocar este projeto fique avontade, para alterar os arquivos rode: </p>
-<p><b>npm run gulp</b> <b>npm run dev</b> para que as alterações tenham efeito</p>
+Este projeto foi feito usando javaScript,scss,html,css,webpack e gulp
+Caso queira clocar este projeto fique avontade, para alterar os arquivos rode:
+<b>npm run gulp</b> <b>npm run dev</b> para que as alterações tenham efeito
 
 
 <p>imagens do projeto</p>
