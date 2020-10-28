@@ -68,6 +68,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   background: #3B9DC2; }
 
 .card {
@@ -83,11 +84,17 @@ main {
   background: #3c3e44;
   color: #fff;
   box-shadow: 1px 8px 11px 0px rgba(0, 0, 0, 0.71); }
+  @media (max-width: 640px) {
+    .card {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
 
 .card h1 {
   font-size: 1em;
   text-decoration: underline; }
   .card h1 a {
+    cursor: pointer;
     color: #fff; }
 
 .card img {
@@ -95,6 +102,9 @@ main {
   height: 100%;
   border-radius: 15%;
   box-shadow: 1px 8px 11px 0px rgba(0, 0, 0, 0.71); }
+  @media (max-width: 640px) {
+    .card img {
+      width: 100%; } }
 
 .card .informacoes {
   margin-left: 20px;
@@ -135,7 +145,8 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 40px;
-  background-color: #0A0d24; }
+  background-color: #0A0d24;
+  position: relative; }
   .card-buttons button {
     margin: 15px;
     padding: 20px; }

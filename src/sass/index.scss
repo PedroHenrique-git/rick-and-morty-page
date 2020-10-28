@@ -81,6 +81,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     background: $azul-mais-claro;
 }
 .card{
@@ -96,11 +97,18 @@ main{
     background: rgb(60, 62, 68);
     color: $branco;
     box-shadow: 1px 8px 11px 0px rgba(0,0,0,0.71);
+
+    @media (max-width: 640px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .card h1{
     font-size: 1em;
     text-decoration: underline;
     a{
+        cursor: pointer;
         color: $branco;
     }
 }
@@ -109,6 +117,10 @@ main{
     height: 100%;
     border-radius: 15%;
     box-shadow: 1px 8px 11px 0px rgba(0,0,0,0.71);
+
+    @media (max-width: 640px){
+        width: 100%;
+    }
 }
 .card .informacoes{
     margin-left: 20px;
@@ -152,6 +164,8 @@ footer{
     align-items: center;
     margin: 40px;
     background-color: $azul-escuro;
+
+    position: relative;
 
     button{
         margin: 15px;

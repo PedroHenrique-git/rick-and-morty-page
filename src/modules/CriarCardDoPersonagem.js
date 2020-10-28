@@ -41,7 +41,7 @@ export default (data) => {
         divStatus.appendChild(divStatusColor);
         divStatus.append(personagem.status);
         
-        h1.innerHTML = `<a href="${personagem.url}">${personagem.name}</a>`;
+        h1.innerHTML = `<a class="name-personagem" link="${personagem.url}">${personagem.name}</a>`;
         img.setAttribute('src',personagem.image);
         
         divInformacoes.classList.add('informacoes')

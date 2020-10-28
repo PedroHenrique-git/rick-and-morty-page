@@ -8,7 +8,7 @@ export default class CriaElementos{
     static criaImg(){
         return document.createElement('img');
     }
-    static createP(){
+    static criarteP(){
         return document.createElement('p');
     }
 }
