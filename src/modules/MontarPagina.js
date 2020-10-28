@@ -27,6 +27,10 @@ export default function(){
         requisicao.GetData(`https://rickandmortyapi.com/api/character/?name=${name}`).then(
             data => {
                 console.log(data);
+                if(data.error){
+                    alert('O personagem não existe');
+                    return;
+                }
                 contaier.innerHTML = '';
                 InserirDados(CriarCard(data));
                 document.querySelector('.card-buttons').style.visibility = "hidden";
