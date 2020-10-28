@@ -2,7 +2,7 @@
 
 <p>imagens do projeto</p>
 <div>
-    <img src="images/pagina_principal"></img>
+    <img src="images/pagina_principal.png"></img>
     <img src="images/pagina__principal.png"></img>
     <img src="images/pagina_do_personagem.png"></img>
     <img src="images/mobile.png"></img>
