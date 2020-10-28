@@ -1,4 +1,4 @@
-<h1>Fan Page Rick And Morty<h1>
+<h1>Fan Page Rick And Morty</h1>
 
 <p>imagens do projeto</p>
 
