@@ -4,6 +4,7 @@
 <p>Este projeto foi feito usando javaScript,scss,html,css,webpack e gulp</p>
 <p>Caso queira clocar este projeto fique avontade, para alterar os arquivos rode:</p>
 <b>npm run gulp</b> <b>npm run dev</b> para que as alterações tenham efeito</p>
+<p>Fonte de dados: https://rickandmortyapi.com/</p>
 
 
 <p>imagens do projeto</p>
