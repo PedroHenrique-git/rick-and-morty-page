@@ -8,7 +8,7 @@ Data source: https://rickandmortyapi.com/
 
 ## Getting Started
 
-install dependencies: <b>npm run install</b>
+install dependencies: <b>npm install</b>
 
 modify css: <b>npm run gulp</b>
 
