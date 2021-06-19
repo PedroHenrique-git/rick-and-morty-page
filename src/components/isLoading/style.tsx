@@ -1,0 +1,18 @@
+import styled from 'styled-components';
+
+export const IsLoadingContainer = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(#000, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 80px;
+        color: #fff;
+    }
+`;

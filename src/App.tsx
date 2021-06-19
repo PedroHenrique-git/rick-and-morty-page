@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { GlobalStyles } from './styles/GlobalStyle';
+import Index from './pages/index/Index';
 
 function App(): JSX.Element {
     return (
-        <div className="App">
-            <h1>Olá mundo</h1>
-        </div>
-    )
+        <>
+            <GlobalStyles />
+            <Index />
+        </>
+    );
 }
 
-export default App
+export default App;
