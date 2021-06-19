@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainWrapper = styled.main`
-    margin: 50px auto;
+    margin: 25px auto;
     padding: 20px;
     max-width: 1720px;
 

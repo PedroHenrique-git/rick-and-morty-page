@@ -6,13 +6,13 @@ export const IsLoadingContainer = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(#000, 0.4);
+    background: RGBA(71, 74, 81, 0.27);
     display: flex;
     justify-content: center;
     align-items: center;
 
     p {
         font-size: 80px;
-        color: #fff;
+        color: #000;
     }
 `;

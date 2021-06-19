@@ -28,6 +28,7 @@ export const Card = styled.li`
 
     .informations_character {
         h1 {
+            font-size: 24px;
             font-weight: bold;
         }
         p {

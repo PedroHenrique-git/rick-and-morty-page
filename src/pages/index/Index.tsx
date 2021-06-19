@@ -42,7 +42,12 @@ interface IInfo {
 
 export default function Index(): JSX.Element {
     const [characters, setCharacters] = useState<Array<ICharacters>>([]);
-    const [info, setInfo] = useState<IInfo | null>(null);
+    const [info, setInfo] = useState<IInfo>({
+        count: '',
+        prev: '',
+        next: '',
+        page: '',
+    });
     const [isLoading, setIsLoading] = useState(true);
 
     const getData = async (url: string | undefined) => {
@@ -86,10 +91,18 @@ export default function Index(): JSX.Element {
                 </ul>
             </MainWrapper>
             <ControlButtons>
-                <button type="button" onClick={() => getData(info?.next)}>
+                <button
+                    type="button"
+                    onClick={() => getData(info?.next)}
+                    disabled={!info.next}
+                >
                     Next
                 </button>
-                <button type="button" onClick={() => getData(info?.prev)}>
+                <button
+                    type="button"
+                    onClick={() => getData(info?.prev)}
+                    disabled={!info.prev}
+                >
                     Prev
                 </button>
             </ControlButtons>
