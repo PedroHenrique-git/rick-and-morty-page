@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
 import Character from '../../components/characterCard/Character';
 import IsLoading from '../../components/isLoading/IsLoading';
@@ -62,7 +63,8 @@ export default function Index(): JSX.Element {
                 setIsLoading(true);
             }
         } catch (e) {
-            throw new Error('there is an error in api');
+            toast.error(e.message);
+            setIsLoading(true);
         }
     };
 
@@ -71,7 +73,7 @@ export default function Index(): JSX.Element {
     }, []);
 
     if (!isLoading) {
-        return <IsLoading msg="Carregando..." />;
+        return <IsLoading msg="Loading..." />;
     }
 
     return (

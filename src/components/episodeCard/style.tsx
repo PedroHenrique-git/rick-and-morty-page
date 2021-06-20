@@ -10,6 +10,6 @@ export const EpisodeInfo = styled.li`
     align-items: center;
 
     p {
-        width: 220px;
+        width: 250px;
     }
 `;

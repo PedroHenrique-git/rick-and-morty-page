@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
 import api from '../../utils/api';
 import { MainContent } from './style';
@@ -51,7 +52,8 @@ export default function CharacterPage(): JSX.Element {
             data.episode.forEach((url) => getEpisode(url));
             setIsLoading(true);
         } catch (e) {
-            throw new Error('there is an error in api');
+            toast.error(e.message);
+            setIsLoading(true);
         }
     };
 
@@ -63,7 +65,8 @@ export default function CharacterPage(): JSX.Element {
             setEpisodes((oldArr) => [...oldArr, data]);
             setIsLoading(true);
         } catch (e) {
-            throw new Error('there is an error in api');
+            toast.error(e.message);
+            setIsLoading(true);
         }
     };
 
@@ -72,7 +75,7 @@ export default function CharacterPage(): JSX.Element {
     }, []);
 
     if (!isLoading) {
-        return <IsLoading msg="Carregando..." />;
+        return <IsLoading msg="Loading..." />;
     }
 
     return (

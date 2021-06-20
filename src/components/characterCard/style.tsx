@@ -8,13 +8,15 @@ export const Card = styled.li`
     font-size: 16px;
     padding: 10px;
     margin-top: 20px;
+    margin-right: 10px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &:hover {
-        transform: scale3d(10%);
+    @media (max-width: 640px) {
+        margin-right: 0;
+        width: 100%;
     }
 
     .character_photo {
@@ -35,6 +37,10 @@ export const Card = styled.li`
             color: #fff;
             font-size: 24px;
             font-weight: bold;
+
+            @media (max-width: 640px) {
+                font-size: 22px;
+            }
         }
         p {
             font-size: 16px;

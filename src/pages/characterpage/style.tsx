@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const MainContent = styled.section`
-    box-shadow: 1px 1px 7px 6px rgba(0, 0, 0, 0.19);
+    //box-shadow: 1px 1px 7px 6px rgba(0, 0, 0, 0.19);
+    border: 1px solid #cecece;
     border-radius: 20px;
     margin: 50px auto;
     max-width: 1200px;
@@ -9,6 +10,10 @@ export const MainContent = styled.section`
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 640px) {
+        margin: 50px 20px;
+    }
 
     .image {
         img {
@@ -27,6 +32,11 @@ export const MainContent = styled.section`
         align-items: center;
         justify-content: space-evenly;
 
+        @media (max-width: 640px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .others_informations {
             h1 {
                 color: #000;
@@ -36,6 +46,10 @@ export const MainContent = styled.section`
                 color: #000;
                 margin: 15px 0;
                 font-size: 20px;
+
+                @media (max-width: 640px) {
+                    margin: 10px 0;
+                }
             }
         }
     }
@@ -46,6 +60,10 @@ export const MainContent = styled.section`
 
         display: flex;
         overflow: auto;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+        }
 
         &::-webkit-scrollbar {
             width: 12px; /* width of the entire scrollbar */

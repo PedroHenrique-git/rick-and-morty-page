@@ -8,8 +8,8 @@ export const MainWrapper = styled.main`
     .container_cads {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -18,6 +18,10 @@ export const ControlButtons = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+
+    @media (max-width: 640px) {
+        gap: 10px;
+    }
 
     button {
         background: #87d5b8;
@@ -29,6 +33,11 @@ export const ControlButtons = styled.div`
         margin-left: 10px;
         cursor: pointer;
         width: 170px;
+
+        @media (max-width: 640px) {
+            margin: 0;
+            width: 150px;
+        }
     }
 `;
 
@@ -36,6 +45,12 @@ export const Form = styled.form`
     display: flex;
     justify-content: center;
     margin: 30px;
+
+    @media (max-width: 640px) {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
 
     input {
         border: 1px solid gray;
@@ -46,6 +61,7 @@ export const Form = styled.form`
         padding: 10px;
         font-size: 18px;
     }
+
     button {
         background: #87d5b8;
         outline: none;
@@ -55,5 +71,10 @@ export const Form = styled.form`
         font-size: 18px;
         margin-left: 10px;
         cursor: pointer;
+
+        @media (max-width: 640px) {
+            margin: 0px;
+            width: 280px;
+        }
     }
 `;

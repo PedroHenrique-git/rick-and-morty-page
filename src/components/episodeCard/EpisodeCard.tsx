@@ -13,7 +13,7 @@ export default function EpisodeCard({
     episode,
 }: IEpisode): JSX.Element {
     return (
-        <EpisodeInfo>
+        <EpisodeInfo key={name}>
             <p>{name}</p>
             <p>{air_date}</p>
             <p>{episode}</p>

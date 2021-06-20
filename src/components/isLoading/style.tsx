@@ -11,7 +11,7 @@ export const IsLoadingContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    p {
+    h1 {
         font-size: 80px;
         color: #000;
     }

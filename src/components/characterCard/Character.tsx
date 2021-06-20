@@ -22,7 +22,7 @@ export default function Character({
     image,
 }: ICharacter): JSX.Element {
     return (
-        <Card>
+        <Card key={id}>
             <div className="character_photo">
                 <img src={image} alt={name} />
             </div>

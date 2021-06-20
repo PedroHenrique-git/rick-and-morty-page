@@ -23,6 +23,11 @@ export const HeaderWrapper = styled.header`
         h1 {
             color: #fff;
             font-weight: 100;
+            font-size: 32px;
+
+            @media (max-width: 640px) {
+                font-size: 22px;
+            }
         }
     }
 `;
