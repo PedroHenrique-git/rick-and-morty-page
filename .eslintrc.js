@@ -27,6 +27,7 @@ module.exports = {
         'import/extensions': 0,
         'import/prefer-default-export': 0,
         'no-non-null-assertion': 0,
+        camelcase: 0,
     },
     settings: {
         'import/resolver': {

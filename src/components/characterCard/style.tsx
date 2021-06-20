@@ -27,7 +27,12 @@ export const Card = styled.li`
     }
 
     .informations_character {
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
         h1 {
+            color: #fff;
             font-size: 24px;
             font-weight: bold;
         }

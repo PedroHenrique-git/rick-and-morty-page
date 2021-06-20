@@ -1,13 +1,14 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyle';
-import Index from './pages/index/Index';
+import Routes from './routes/routes';
 
 function App(): JSX.Element {
     return (
-        <>
+        <BrowserRouter>
             <GlobalStyles />
-            <Index />
-        </>
+            <Routes />
+        </BrowserRouter>
     );
 }
 

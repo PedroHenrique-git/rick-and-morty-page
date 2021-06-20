@@ -13,7 +13,7 @@ interface IData {
         prev: string;
     };
     results: Array<{
-        id: string;
+        id: number;
         name: string;
         status: string;
         type: string;
@@ -24,7 +24,7 @@ interface IData {
 }
 
 interface ICharacters {
-    id: string;
+    id: number;
     name: string;
     status: string;
     type: string;
@@ -80,6 +80,7 @@ export default function Index(): JSX.Element {
                 <ul className="container_cads">
                     {characters.map((character) => (
                         <Character
+                            id={character.id}
                             name={character.name}
                             gender={character.gender}
                             species={character.species}
