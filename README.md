@@ -3,6 +3,8 @@
 
 a SPA consuming the data from the rick and morty api
 
+API used: https://rickandmortyapi.com/
+
 ## Getting Started
 
 you can see the app online here: https://pedrohenrique-git.github.io/rick-and-morty-page/
