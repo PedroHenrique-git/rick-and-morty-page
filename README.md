@@ -15,6 +15,7 @@ you can see the app online here: https://pedrohenrique-git.github.io/rick-and-mo
 <a href="https://reactjs.org/">React</a><br/>
 <a href="https://reactrouter.com/web/guides/quick-start">React router dom</a><br/>
 <a href="https://fkhadra.github.io/react-toastify/introduction">React toastify</a><br/>
+<a href="https://styled-components.com/">Styled componenets</a><br/>
 
 ### Installing
 
