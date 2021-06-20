@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import Character from '../../components/characterCard/Character';
 import IsLoading from '../../components/isLoading/IsLoading';
-import { MainWrapper, ControlButtons } from './style';
+import { MainWrapper, ControlButtons, Form } from './style';
 import api from '../../utils/api';
 
 interface IData {
@@ -49,6 +49,7 @@ export default function Index(): JSX.Element {
         page: '',
     });
     const [isLoading, setIsLoading] = useState(true);
+    const [characterName, setCharacterName] = useState('');
 
     const getData = async (url: string | undefined) => {
         try {
@@ -76,6 +77,19 @@ export default function Index(): JSX.Element {
     return (
         <>
             <Header title="Rick and Morty SPA" />
+            <Form>
+                <input
+                    onChange={(e) => setCharacterName(e.target.value)}
+                    type="text"
+                    placeholder="character name"
+                />
+                <button
+                    onClick={() => getData(`/character/?name=${characterName}`)}
+                    type="button"
+                >
+                    Search character
+                </button>
+            </Form>
             <MainWrapper>
                 <ul className="container_cads">
                     {characters.map((character) => (

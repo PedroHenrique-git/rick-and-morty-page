@@ -8,6 +8,7 @@ export default function Routes(): JSX.Element {
         <Switch>
             <Route exact path="/" component={Index} />
             <Route exact path="/character/:id" component={CharacterPage} />
+            <Route exact path="*" component={Index} />
         </Switch>
     );
 }

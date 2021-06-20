@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
     padding: 15px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     .container_title_logo {
@@ -23,28 +23,6 @@ export const HeaderWrapper = styled.header`
         h1 {
             color: #fff;
             font-weight: 100;
-        }
-    }
-
-    .search_char {
-        input {
-            outline: none;
-            border: none;
-            height: 25px;
-            width: 280px;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 18px;
-        }
-        button {
-            background: #87d5b8;
-            outline: none;
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 18px;
-            margin-left: 10px;
-            cursor: pointer;
         }
     }
 `;

@@ -48,14 +48,14 @@ export default function CharacterPage(): JSX.Element {
             const response = await api.get<ICharacters>(`/character/${id}`);
             const data = await response.data;
             setCharacter(data);
-            data.episode.forEach((url) => getFirstEpisode(url));
+            data.episode.forEach((url) => getEpisode(url));
             setIsLoading(true);
         } catch (e) {
             throw new Error('there is an error in api');
         }
     };
 
-    const getFirstEpisode = async (url: string) => {
+    const getEpisode = async (url: string) => {
         try {
             setIsLoading(false);
             const response = await fetch(url);
@@ -75,8 +75,6 @@ export default function CharacterPage(): JSX.Element {
         return <IsLoading msg="Carregando..." />;
     }
 
-    // console.log(firstEpisode);
-
     return (
         <>
             <Header title="Rick and Morty SPA" />
@@ -92,9 +90,7 @@ export default function CharacterPage(): JSX.Element {
                         <p>{character.status}</p>
                     </div>
                 </div>
-                <h1 className="title_episodes">
-                    List of episodes from character
-                </h1>
+                <h1 className="title_episodes">Character episode list</h1>
                 <ul className="episodes_informations">
                     {episodes.map((episode) => (
                         <EpisodeCard

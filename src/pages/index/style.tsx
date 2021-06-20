@@ -31,3 +31,29 @@ export const ControlButtons = styled.div`
         width: 170px;
     }
 `;
+
+export const Form = styled.form`
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+
+    input {
+        border: 1px solid gray;
+        outline: none;
+        height: 25px;
+        width: 280px;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 18px;
+    }
+    button {
+        background: #87d5b8;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 18px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+`;

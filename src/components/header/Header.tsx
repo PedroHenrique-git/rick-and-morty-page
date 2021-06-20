@@ -16,10 +16,6 @@ export default function Header({ title }: IHeaderProperty): JSX.Element {
                 </Link>
                 <h1>{title}</h1>
             </div>
-            <div className="search_char">
-                <input type="text" placeholder="character name" />
-                <button type="button">Search character</button>
-            </div>
         </HeaderWrapper>
     );
 }
