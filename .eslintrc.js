@@ -28,6 +28,7 @@ module.exports = {
         'import/prefer-default-export': 0,
         'no-non-null-assertion': 0,
         camelcase: 0,
+        'react/jsx-props-no-spreading': 0,
     },
     settings: {
         'import/resolver': {

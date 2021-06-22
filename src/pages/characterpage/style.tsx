@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 export const MainContent = styled.section`
-    //box-shadow: 1px 1px 7px 6px rgba(0, 0, 0, 0.19);
-    border: 1px solid #cecece;
+    background-image: linear-gradient(
+        to right bottom,
+        #1f202f,
+        #1b1f2f,
+        #171e2e,
+        #121d2e,
+        #0c1c2d
+    );
     border-radius: 20px;
     margin: 50px auto;
     max-width: 1200px;
@@ -10,27 +16,38 @@ export const MainContent = styled.section`
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    @media (max-width: 640px) {
+    @media (max-width: 1240px) {
         margin: 50px 20px;
     }
 
     .image {
+        margin-right: 30px;
+
+        @media (max-width: 640px) {
+            margin: 0;
+        }
+
         img {
             border-radius: 20px;
         }
     }
 
     .title_episodes {
-        color: #000;
-        margin: 30px;
+        color: #f5f2f6;
+        margin-bottom: 30px;
         text-align: center;
+        font-weight: 100;
+        text-transform: uppercase;
     }
 
     .character_informations {
+        margin-bottom: 50px;
+
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
 
         @media (max-width: 640px) {
             flex-direction: column;
@@ -39,13 +56,16 @@ export const MainContent = styled.section`
 
         .others_informations {
             h1 {
-                color: #000;
+                color: #f5f2f6;
                 font-size: 32px;
+                font-weight: 100;
+                text-transform: uppercase;
             }
             p {
-                color: #000;
+                color: #f5f2f6;
                 margin: 15px 0;
                 font-size: 20px;
+                font-weight: 100;
 
                 @media (max-width: 640px) {
                     margin: 10px 0;
@@ -55,28 +75,6 @@ export const MainContent = styled.section`
     }
 
     .episodes_informations {
-        margin: 30px 0;
-        width: 100%;
-
-        display: flex;
-        overflow: auto;
-
-        @media (max-width: 640px) {
-            flex-direction: column;
-        }
-
-        &::-webkit-scrollbar {
-            width: 12px; /* width of the entire scrollbar */
-        }
-
-        &::-webkit-scrollbar-track {
-            border-radius: 20px;
-            background: #cfcecd; /* color of the tracking area */
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: #3d3d3d;
-            border-radius: 20px;
-        }
+        width: 80%;
     }
 `;

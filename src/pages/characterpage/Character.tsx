@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Slider from 'react-slick';
 import Header from '../../components/header/Header';
 import api from '../../utils/api';
 import { MainContent } from './style';
@@ -29,6 +30,22 @@ interface IEpisode {
     episode: string;
 }
 
+interface SliderProps {
+    dots: boolean;
+    infinite: true;
+    speed: number;
+    slidesToShow: number;
+    slidesToScroll: number;
+    responsive: Array<{
+        breakpoint: number;
+        settings: {
+            slidesToShow: number;
+            slidesToScroll: number;
+            dots: boolean;
+        };
+    }>;
+}
+
 export default function CharacterPage(): JSX.Element {
     const [character, setCharacter] = useState<ICharacters>({
         episode: [],
@@ -39,6 +56,23 @@ export default function CharacterPage(): JSX.Element {
         species: '',
         status: '',
     });
+    const settings: SliderProps = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                },
+            },
+        ],
+    };
     const [isLoading, setIsLoading] = useState(true);
     const [episodes, setEpisodes] = useState<IEpisode[]>([]);
     const { id } = useParams<IParam>();
@@ -91,18 +125,22 @@ export default function CharacterPage(): JSX.Element {
                         <p>{character.origin.name}</p>
                         <p>{character.species}</p>
                         <p>{character.status}</p>
+                        <p>{character.gender}</p>
                     </div>
                 </div>
-                <h1 className="title_episodes">Character episode list</h1>
-                <ul className="episodes_informations">
-                    {episodes.map((episode) => (
-                        <EpisodeCard
-                            air_date={episode.air_date}
-                            name={episode.name}
-                            episode={episode.episode}
-                        />
-                    ))}
-                </ul>
+                {/* <h1 className="title_episodes">Character episode list</h1> */}
+                <div className="episodes_informations">
+                    <h1 className="title_episodes">Character episode list</h1>
+                    <Slider {...settings}>
+                        {episodes.map((episode) => (
+                            <EpisodeCard
+                                air_date={episode.air_date}
+                                name={episode.name}
+                                episode={episode.episode}
+                            />
+                        ))}
+                    </Slider>
+                </div>
             </MainContent>
         </>
     );
